@@ -1,0 +1,6 @@
+*.vscode
+*.code-workspace
+**/cover
+**/__pycache__
+*.coverage
+*.report
