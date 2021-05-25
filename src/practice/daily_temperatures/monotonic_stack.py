@@ -3,6 +3,7 @@ from typing import List
 # Monotonic stack
 ## Helps us identify smallest values when stack is in ascending
 ## Helps us identify largest values when stack is descending (*)
+# Reference: https://www.youtube.com/watch?v=m4hvxzLoN_I
 def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
   stack = []
   result = [0 for i in range(len(temperatures))]
