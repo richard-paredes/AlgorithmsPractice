@@ -1,6 +1,6 @@
 from unittest import TestCase
 from sorting_tests import SortingTests
-from sorting.selection_sort import selection_sort
+from learning.sorting.selection_sort import selection_sort
 
 class TestSelectionSort(SortingTests, TestCase):
 

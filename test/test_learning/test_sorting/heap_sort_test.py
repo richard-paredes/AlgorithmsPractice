@@ -1,6 +1,6 @@
 from unittest import TestCase
 from sorting_tests import SortingTests
-from sorting.heap_sort import heap_sort
+from learning.sorting.heap_sort import heap_sort
 
 class TestHeapSort(SortingTests, TestCase):
 

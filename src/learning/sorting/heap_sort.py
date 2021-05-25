@@ -42,6 +42,17 @@ class PriorityQueue:
     for i in range(len(array)):
       self.insert(array[i])
   
+  def optimized_make_heap(self, array):
+    self.initialize()
+    self.num_elements = len(array)
+    
+    for i in range(len(array)):
+      self.queue[i + 1] = array[i]
+    
+    for i in range(self.num_elements//2, 0, -1):
+      self.bubble_down(i)
+    
+  
   def extract_minimum(self):
     minimum = -1
     
@@ -72,7 +83,8 @@ class PriorityQueue:
 def heap_sort(array):
   arr = array[:]
   priority_queue = PriorityQueue(len(array))
-  priority_queue.make_heap(arr)
+#   priority_queue.make_heap(arr)
+  priority_queue.optimized_make_heap(arr)
   
   for i in range(len(arr)):
     arr[i] = priority_queue.extract_minimum()

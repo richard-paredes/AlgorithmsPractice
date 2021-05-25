@@ -1,5 +1,5 @@
 from unittest import TestCase
-from pattern_matching.substring_pattern_match import substring_pattern_match
+from learning.pattern_matching.substring_pattern_match import substring_pattern_match
 
 class TestSubstringPatternMatch(TestCase):
   

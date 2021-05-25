@@ -1,7 +1,5 @@
 def substring_pattern_match(string_to_search, pattern):
-  if len(pattern) < 1:
-    return 0
-  
+
   for i in range(len(string_to_search)):
     search_idx = i
     pattern_idx = 0

@@ -11,11 +11,12 @@ sys.path.append(os.path.dirname(__file__))
 def setup():
   sh('python -m pip install coverage')
   sh('python -m pip install nose')
+  sh('python -m pip install nose-exclude')
   sh('python -m pip install radon')
 
 @task
 def test():
-  sh('python -m nose --with-coverage --cover-erase --cover-branches --cover-html --cover-package=src test')
+  sh('python -m nose --with-coverage --cover-erase --cover-branches --cover-html --cover-package=src/practice test')
 
 @task
 def cleanup():
@@ -36,6 +37,6 @@ def radon():
     raise Exception('radon found complex code')
 
 @task
-@needs(['setup', 'cleanup', 'test', 'radon'])
+@needs(['setup', 'cleanup', 'test'])
 def default():
   pass

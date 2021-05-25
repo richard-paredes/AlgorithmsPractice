@@ -1,6 +1,6 @@
 from unittest import TestCase
 from sorting_tests import SortingTests
-from sorting.insertion_sort import insertion_sort
+from learning.sorting.insertion_sort import insertion_sort
 
 class TestInsertionSort(SortingTests, TestCase):
 
